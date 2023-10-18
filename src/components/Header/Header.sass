@@ -1,0 +1,85 @@
+@import '../../../src/main'
+
+header
+  position: sticky
+  top: 0
+  z-index: 2
+
+nav
+  display: flex
+  align-items: center
+  justify-content: space-between
+  background-color: rgb(0,0,0,0.2)
+  padding: 20px 60px
+
+#navbar
+  display: flex
+  align-items: center
+  justify-content: center
+
+  li
+    list-style: none
+    padding: 0 20px
+    position: relative
+    text-transform: uppercase
+
+    a
+      text-decoration: none
+      font: 110% $main-font
+      font-weight: bold
+      color: $white
+
+    a:hover
+      color: $orange
+
+  .active
+    color: $orange
+
+.logo
+  color: $white
+  font-weight: bold
+  color: $orange
+
+  img
+    height: 50px
+
+#mobile
+  display: none
+
+  i
+    color: $white
+    align-items: center
+    position: absolute
+    right: 0
+    top: 0
+    padding: 25px
+
+@media (max-width: 767px)
+  #navbar
+    display: flex
+    flex-direction: column
+    align-items: flex-start
+    justify-content: flex-start
+    position: fixed
+    right: -110%
+    top: 84px
+    width: 100%
+    height: 200px
+    background-color: $dark-green
+    padding: 40px 0 0 10px
+    transition: 0.4s ease-in-out
+
+    li
+      margin-bottom: 25px
+
+  #mobile
+    display: block
+
+    i
+      cursor: pointer
+      font-size: 30px
+      color: $orange
+
+#navbar.active
+  right: 0px
+  box-shadow: 0 40px 60px rgb(0 ,0 ,0, 0.1 )

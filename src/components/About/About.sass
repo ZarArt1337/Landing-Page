@@ -1,9 +1,32 @@
-@import '../../../src/main'
+@import '../src/main'
 
 .about
-    background: $white
-    color: $black
-    padding: 100px 50px 80px 50px
+	background: $white
+	color: $black
+	padding: 100px 50px 80px 50px
 
-.about-info
-    text-align: justify
+	h1
+		padding: 10px
+
+.about-box
+	display: flex
+	justify-content: center
+
+	.about-info
+		max-width: 700px
+		width: 100%
+		text-align: justify
+		padding: 10px
+
+		p
+			margin: 0
+			padding-bottom: 10px
+
+	img
+		max-width: 700px
+		width: 100%
+		padding: 10px
+
+@media (max-width: 900px)
+	.about-box
+		flex-direction: column

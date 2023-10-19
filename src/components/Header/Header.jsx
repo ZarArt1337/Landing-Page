@@ -1,32 +1,45 @@
 import "./Header.sass";
-import {Component} from 'react';
+import React, { useState } from 'react';
 
-export default class Header extends Component {
-  state = {clicked: false};
-  handleClick = () => {
-    this.setState({clicked:!this.state.clicked})
+const Header = () => {
+
+  const [click, setClick] = useState(false)
+  const handleClick = () => setClick(!click)
+
+  const [color, setColor] = useState(false)
+  const changeColor = () => {
+    if (window.scrollY >= 90) {
+      setColor(true)
+    } else {
+      setColor(false)
+    }
   }
 
-  render(){
+  window.addEventListener('scroll', changeColor)
+
+  const closeMenu = () => setClick(false)
+
     return(
       <>
       <header>
-        <nav>
+        <nav className={color ? "nav nav-bg" : "nav"}>
           <div className="logo"><img src="../src/assets/logo-nav.png" alt="logo" /></div>
-          <ul id="navbar" className={this.state.clicked ? "#navbar active" :"#navbar"}>
-            <li><a className="active" href="#home">Home</a></li>
-            <li><a href="#about">About us</a></li>
-            <li><a href="#menu">Menu</a></li>
-            <li><a href="#gallery">Gallery</a></li>
-            <li><a href="#contact">Contact</a></li>
+          <ul id="navbar" onClick={handleClick} className={click ? "#navbar active" :"#navbar"}>
+            <li><a className="active" href="#home" onClick={closeMenu}>Home</a></li>
+            <li><a href="#about" onClick={closeMenu}>About</a></li>
+            <li><a href="#menu" onClick={closeMenu}>Menu</a></li>
+            <li><a href="#gallery" onClick={closeMenu}>Gallery</a></li>
+            <li><a href="#contact" onClick={closeMenu}>Contact</a></li>
           </ul>
-          <div id="mobile" onClick={this.handleClick}>
-            <i id="bar" className="material-icons">{this.state.clicked ? "close" : "menu"}</i>
+          <div id="mobile" onClick={handleClick}>
+            <i id="bar" className="material-icons">{click ? "close" : "menu"}</i>
           </div>
         </nav>      
       </header>
       </>
     );
 
-  }
+  
 }
+
+export default Header

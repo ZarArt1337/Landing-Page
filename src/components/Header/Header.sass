@@ -1,21 +1,24 @@
-@import '../../../src/main'
+@import '../src/main'
 
 header
   position: sticky
   top: 0
   z-index: 2
 
-nav
+.nav-bg
+  background: black
+
+.nav
   display: flex
   align-items: center
   justify-content: space-between
-  background-color: rgb(0,0,0,0.2)
   padding: 20px 60px
 
 #navbar
   display: flex
   align-items: center
   justify-content: center
+  margin: 0
 
   li
     list-style: none
@@ -61,12 +64,12 @@ nav
     align-items: flex-start
     justify-content: flex-start
     position: fixed
-    right: -110%
-    top: 84px
-    width: 100%
-    height: 200px
-    background-color: $dark-green
-    padding: 40px 0 0 10px
+    right: -310px
+    top: 0
+    width: 300px
+    height: 100%
+    background-color: black
+    padding: 40px 0 0 0px
     transition: 0.4s ease-in-out
 
     li
@@ -82,4 +85,3 @@ nav
 
 #navbar.active
   right: 0px
-  box-shadow: 0 40px 60px rgb(0 ,0 ,0, 0.1 )

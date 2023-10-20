@@ -1,4 +1,5 @@
 import "./Header.sass";
+import ScrollSpyLink from '../ScrollSpyLink/ScrollSpyLink.jsx';
 import React, { useState } from 'react';
 
 const Header = () => {
@@ -25,11 +26,13 @@ const Header = () => {
         <nav className={color ? "nav nav-bg" : "nav"}>
           <div className="logo"><img src="../src/assets/logo-nav.png" alt="logo" /></div>
           <ul id="navbar" onClick={handleClick} className={click ? "#navbar active" :"#navbar"}>
-            <li><a className="active" href="#home" onClick={closeMenu}>Home</a></li>
-            <li><a href="#about" onClick={closeMenu}>About</a></li>
-            <li><a href="#menu" onClick={closeMenu}>Menu</a></li>
-            <li><a href="#gallery" onClick={closeMenu}>Gallery</a></li>
-            <li><a href="#contact" onClick={closeMenu}>Contact</a></li>
+            <li>
+              <ScrollSpyLink to ="home" onClick={closeMenu}>Home</ScrollSpyLink>
+              </li>
+            <li><ScrollSpyLink to="about" onClick={closeMenu}>About</ScrollSpyLink></li>
+            <li><ScrollSpyLink to="menu" onClick={closeMenu}>Menu</ScrollSpyLink></li>
+            <li><ScrollSpyLink to="gallery" onClick={closeMenu}>Gallery</ScrollSpyLink></li>
+            <li><ScrollSpyLink to="contact" onClick={closeMenu}>Contact</ScrollSpyLink></li>
           </ul>
           <div id="mobile" onClick={handleClick}>
             <i id="bar" className="material-icons">{click ? "close" : "menu"}</i>

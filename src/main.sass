@@ -1,12 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,800;0,900;1,900&display=swap')
 
+$main: #b6ad36
 $black: #242222
+$lightblack: #353333
 $white: #eeeeee
-$yellow: #ffee00
-$orange: #ff9900
-$blue: #5627a7
-$green: #2c6536
-$dark-green: #315237
+$grey: #bebebe
 $main-font: 'Poppins', sans-serif
 
 *
@@ -17,8 +15,22 @@ html
 
 body
   position: relative
-  background: url('../../assets/main-image.jpg') no-repeat center center/cover
-  margin: 0
+  background: url('../../assets/main-image.jpg')
+  background-repeat: no-repeat
   padding: 0
+  margin: 0
   font-family: $main-font
-  color: $white
+
+.section-name
+  color: $main
+  padding: 10px
+  text-align: center
+
+.hero-shadow
+  position: absolute
+  top: 0
+  left: 0
+  width: 100%
+  height: 110vh
+  background-color: rgb(0,0,0,0.5)
+  z-index: -1

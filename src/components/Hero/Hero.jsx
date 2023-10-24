@@ -4,6 +4,7 @@ const Hero = () => {
   return (
     <>
     <div className="hero-shadow" id="home"/>
+    
     <div className="hero-box">
       <div className="hero-info">
         <h1>Best quality food</h1>

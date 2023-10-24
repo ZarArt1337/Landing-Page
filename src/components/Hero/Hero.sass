@@ -8,6 +8,7 @@
 	justify-content: center
 	padding: 0px 50px 50px 50px
 	flex-direction: column
+	color: $white
 
 	p
 		text-align: justify
@@ -20,7 +21,7 @@
 
 	a
 		text-decoration: none
-		background: $orange
+		background: $main
 		border-radius: 5px
 		padding: 10px 20px
 		text-transform: uppercase
@@ -29,8 +30,9 @@
 		font-weight: bold
 
 	a:hover
-		background: $green
-		color: $white
+		background: transparent
+		border: 1px solid $main
+		color: $main
 
 .hero-info
 	max-width: 600px
@@ -41,5 +43,5 @@
 	left: 0
 	width: 100%
 	height: 110vh
-	background-color: rgb(0,0,0,0.6)
+	background-color: rgb(0,0,0,0.5)
 	z-index: -1

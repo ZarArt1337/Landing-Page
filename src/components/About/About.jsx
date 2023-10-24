@@ -3,8 +3,8 @@ import './About.sass'
 const About = () => {
   return (
     <>
-      <div className="about" id="about">
-      <h1>About us:</h1>
+      <div className="about">
+      <h1 className="section-name" id="about">About us:</h1>
         <div className="about-box">
           <div className="about-info">
             <p>

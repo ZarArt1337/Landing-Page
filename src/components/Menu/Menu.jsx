@@ -21,9 +21,10 @@ const Menu = () => {
 
   return (
     <>
+    
+    <div className="menu-container" >
     <div className="hero-shadow"/>
-    <div className="menu-container" id="menu">
-      <h1 className="section-name">Menu</h1>
+      <h1 className="section-name" id="menu">Menu</h1>
         <div>
           <div>
             <div className="menu-category">

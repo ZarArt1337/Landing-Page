@@ -23,8 +23,8 @@ const items = [
 
 const Gallery = () => {
   return (
-    <div className="gallery-container" id="gallery">
-      <h1 className="section-name">Gallery</h1>
+    <div className="gallery-container" >
+      <h1 className="section-name" id="gallery">Gallery</h1>
       <AliceCarousel disableButtonsControls responsive={responsive} mouseTracking items={items}/>
     </div>
 

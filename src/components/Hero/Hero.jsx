@@ -11,7 +11,7 @@ const Hero = () => {
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus error quo sapiente obcaecati dolores consequatur pariatur cumque ad perferendis ut?</p>
       </div>
       <div className="hero-contact">
-          <a href="tel:+48600000000">Order</a>
+          <a href="tel:+48600000000"><button>Order</button></a>
       </div>
     </div>
     </>

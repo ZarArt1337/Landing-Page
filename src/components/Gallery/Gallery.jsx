@@ -6,10 +6,10 @@ import './Gallery.sass';
 const handleDragStart = (e) => e.preventDefault();
 
 const responsive = {
-    0: { items: 1 },
-    568: { items: 2 },
+    0: { items: 1},
+    600: { items: 2},
     1024: { items: 3},
-    1300: { items: 4 },
+    1200: { items: 4}
 };
 
 const items = [

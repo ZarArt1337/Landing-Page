@@ -6,7 +6,7 @@ const Header = () => {
 
   const [click, setClick] = useState(false)
   const handleClick = () => setClick(!click)
-
+  
   const [color, setColor] = useState(false)
   const changeColor = () => {
     if (window.scrollY >= 90) {
@@ -18,7 +18,7 @@ const Header = () => {
 
   window.addEventListener('scroll', changeColor)
 
-  const closeMenu = () => setClick(false)
+  const closeMenu = () => setClick(false);
 
     return(
       <>
@@ -26,10 +26,8 @@ const Header = () => {
         <nav className={color ? "nav nav-bg" : "nav"}>
           <div className="logo"><img src="../src/assets/logo-nav.png" alt="logo" /></div>
           <ul id="navbar" onClick={handleClick} className={click ? "#navbar active" :"#navbar"}>
-            <li>
-              <ScrollSpyLink to ="home" onClick={closeMenu}>Home</ScrollSpyLink>
-              </li>
-            <li><ScrollSpyLink to="about" onClick={closeMenu}>About</ScrollSpyLink></li>
+            <li><ScrollSpyLink to={"home"} onClick={closeMenu}>Home</ScrollSpyLink></li>
+            <li><ScrollSpyLink to={"about"} onClick={closeMenu}>About</ScrollSpyLink></li>
             <li><ScrollSpyLink to="menu" onClick={closeMenu}>Menu</ScrollSpyLink></li>
             <li><ScrollSpyLink to="gallery" onClick={closeMenu}>Gallery</ScrollSpyLink></li>
             <li><ScrollSpyLink to="contact" onClick={closeMenu}>Contact</ScrollSpyLink></li>
@@ -41,8 +39,6 @@ const Header = () => {
       </header>
       </>
     );
-
-  
 }
 
 export default Header

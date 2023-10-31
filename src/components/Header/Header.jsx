@@ -1,6 +1,7 @@
 import "./Header.sass";
 import ScrollSpyLink from '../ScrollSpyLink/ScrollSpyLink.jsx';
-import React, { useState } from 'react';
+import { useState } from 'react';
+import { useEffect } from "react";
 
 const Header = () => {
 
@@ -16,7 +17,8 @@ const Header = () => {
     }
   }
 
-  window.addEventListener('scroll', changeColor)
+  useEffect
+  window.addEventListener("scroll", changeColor);
 
   const closeMenu = () => setClick(false);
 
@@ -24,10 +26,10 @@ const Header = () => {
       <>
       <header>
         <nav className={color ? "nav nav-bg" : "nav"}>
-          <div className="logo"><img src="../src/assets/logo-nav.png" alt="logo" /></div>
+          <div className="logo"><img src="./src/assets/logo-nav.png" alt="logo" /></div>
           <ul id="navbar" onClick={handleClick} className={click ? "#navbar active" :"#navbar"}>
-            <li><ScrollSpyLink to={"home"} onClick={closeMenu}>Home</ScrollSpyLink></li>
-            <li><ScrollSpyLink to={"about"} onClick={closeMenu}>About</ScrollSpyLink></li>
+            <li><ScrollSpyLink to="home" onClick={closeMenu}>Home</ScrollSpyLink></li>
+            <li><ScrollSpyLink to="about" onClick={closeMenu}>About</ScrollSpyLink></li>
             <li><ScrollSpyLink to="menu" onClick={closeMenu}>Menu</ScrollSpyLink></li>
             <li><ScrollSpyLink to="gallery" onClick={closeMenu}>Gallery</ScrollSpyLink></li>
             <li><ScrollSpyLink to="contact" onClick={closeMenu}>Contact</ScrollSpyLink></li>
@@ -41,4 +43,4 @@ const Header = () => {
     );
 }
 
-export default Header
+export default Header;

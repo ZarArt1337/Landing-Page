@@ -26,7 +26,7 @@ const Header = () => {
       <>
       <header>
         <nav className={color ? "nav nav-bg" : "nav"}>
-          <div className="logo"><img src="src/assets/logo-nav.png" alt="logo" /></div>
+          <div className="logo"><img src="../../src/assets/logo-nav.png" alt="logo" /></div>
           <ul id="navbar" onClick={handleClick} className={click ? "#navbar active" :"#navbar"}>
             <li><ScrollSpyLink to="home" onClick={closeMenu}>Home</ScrollSpyLink></li>
             <li><ScrollSpyLink to="about" onClick={closeMenu}>About</ScrollSpyLink></li>

@@ -12,12 +12,12 @@ const responsive = {
 };
 
 const items = [
-  <img className="gallery-img" src="src/assets/gallery/img1.jpg" onDragStart={handleDragStart} role="presentation" />,
-  <img className="gallery-img" src="src/assets/gallery/img2.jpg" onDragStart={handleDragStart} role="presentation" />,
-  <img className="gallery-img" src="src/assets/gallery/img3.jpg" onDragStart={handleDragStart} role="presentation" />,
-  <img className="gallery-img" src="src/assets/gallery/img4.jpg" onDragStart={handleDragStart} role="presentation" />,
-  <img className="gallery-img" src="src/assets/gallery/img5.jpg" onDragStart={handleDragStart} role="presentation" />,
-  <img className="gallery-img" src="src/assets/gallery/img6.jpg" onDragStart={handleDragStart} role="presentation" />,
+  <img className="gallery-img" src="../../src/assets/gallery/img1.jpg" onDragStart={handleDragStart} role="presentation" />,
+  <img className="gallery-img" src="../../src/assets/gallery/img2.jpg" onDragStart={handleDragStart} role="presentation" />,
+  <img className="gallery-img" src="../../src/assets/gallery/img3.jpg" onDragStart={handleDragStart} role="presentation" />,
+  <img className="gallery-img" src="../../src/assets/gallery/img4.jpg" onDragStart={handleDragStart} role="presentation" />,
+  <img className="gallery-img" src="../../src/assets/gallery/img5.jpg" onDragStart={handleDragStart} role="presentation" />,
+  <img className="gallery-img" src="../../src/assets/gallery/img6.jpg" onDragStart={handleDragStart} role="presentation" />,
 ];
 
 const Gallery = () => {

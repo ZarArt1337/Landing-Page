@@ -8,7 +8,7 @@ const Contact = () => {
       <div className="contact-content">
 
           <div className="contact-address">
-            <div className="logo"><img src="../src/assets/logo-nav.png" alt="logo" /></div>
+            <div className="logo"><img src="../../src/assets/logo-nav.png" alt="logo" /></div>
             <p>123 Example Street, City 00-000</p>
             <p>Phone: 123-456-789</p>
             <p>Email: contact@restaurant.com</p>
